@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    cursor: default;
+}
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+:root{
+    --theme-border: #c1ff72;
+}
+
+.control , .upload{
+    color: grey;
+    border: 4px solid var(--theme-border);
+    border-radius: 20px;
+}
+.upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.control{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px;
+}
+.control > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.option{height: 70%;}
+.range{ height: 30%;}
+.control > div > .toggle{
+    background-color: #c1ff72;
+    height: 80%;
+    aspect-ratio: 2/1;
+    border-radius: 1000px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.control > div > .download {
+    background-color: #c1ff72;
+    width: 70%;
+    height: 80%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+#primary_c , #secondary_c{
+    height: 95%;
+    aspect-ratio: 1/1;
+    border: 2px solid black;
+    border-radius: 1000px;
+}
+#primary_c{ background-color: aliceblue;}
+#secondary_c{ background-color: black;}
+.range{
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#threshold_display{
+    font-size: smaller;
+    color: white;
+    width: 20px;
+    font-size: 10px;
+    margin-inline-start: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+@media (min-width: 500px){
+    section > div{
+        width: 30%;
+    }
+    .control{ height: 15%;}
+    .upload{height: 75%;}
+}
+
+@media (max-width: 500px){
+    section > div{
+        width: 90%;
+    }
+    .control{ height: 15%;}
+    .upload{height: 75%;}
+}
+/* 
+@media (max-width: 900px){
+    section > div{
+        width: 40%;
+    }
+    .control{ height: 15%;}
+    .upload{height: 75%;}
+} */
+
+
+input{
+    width: 100%;
+    -webkit-appearance: none;
+    height: 4px;
+    background-color: grey;
+    overflow: visible;
+    border-radius: 10px;
+}
+input::-webkit-slider-thumb{
+    appearance: none;
+    aspect-ratio: 1/1;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #c1ff72;
+}
+
+.upload > h1{
+    font-size: 400%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

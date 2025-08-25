@@ -1,0 +1,37 @@
+<!-- Echoes of a know stranger -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Echoes of Her  🤍 </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="upload" id="upload">
+            <h1>Click Me !</h1>
+        </div>
+        <div class="control">
+            <div class="option">
+                <div class="toggle" id="toggle">
+                    <div id="primary_c"></div>
+                    <div id="secondary_c"></div>
+                </div>
+                <div class="download" id="download"> Save </div>
+            </div>
+            <div class="range">
+                <input type="range" min="1" max="255" value="0" id="threshold_input">
+                <h2 id="threshold_display">00</h2>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- hidden elements preceeds -->
+
+    <canvas id="canvas" style="display: none;"></canvas>
+     <input type="file" accept="image/*" style="display: none;" id="input">
+    <script src="index.js"></script>
+</body>
+</html>
